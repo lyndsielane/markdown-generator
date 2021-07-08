@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
-const fs = require(fs);
-const inquirer = require(inquirer);
+const fs = require('fs');
+const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
-const questions = [
+const questions = inquirer.prompt([
     {
         type: 'input',
         message: "What is your username?",
@@ -26,6 +26,7 @@ const questions = [
     {
         type: 'checkbox',
         message: 'Please choose your license type.',
+        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'none'],
         name: 'license'
     },
     {
@@ -48,7 +49,7 @@ const questions = [
         message: "Advise user information for contributing.",
         name: 'contribution'
     }
-];
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
