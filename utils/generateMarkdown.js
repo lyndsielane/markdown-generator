@@ -1,45 +1,87 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  //switch case to return the matching license batch based on the license name.
-  switch(license)  {
-    case licence = "MIT": 
-      break;
-    case license = "Apache 2.0":
-      break;
-    case license = "GPL 3.0":
-      break;
-    case license = "BSD 3":
-      break;
-    default: 
+function renderTableOfContents(data) {
+  return `
+## Table of Contents
+* [Installation](#installation)
+
+* [Usage](#usage)
+  `;
 }
 
-// TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  //switch case to return a license link based on the license name
+function renderLicenseBadge(license) {
+  if (license === '' || license === 'none') {
+    return '';
+  }
+
+  let badge, link;
+
+  switch (license) {
+    case 'MIT':
+      badge = 'MIT-yellow';
+      link = 'MIT';
+      break;
+    case 'APACHE 2.0':
+      badge = 'Apache%202.0-blue';
+      link = 'Apache-2.0';
+      break;
+    case 'GPL 3.0':
+      badge = 'GPLv3-blue';
+      link = 'gpl-3.0';
+      break;
+    case 'BSD 3':
+      badge = 'BSD%203--Clause-blue';
+      link = 'BSD-3-Clause';
+      break;
+    default:
+      badge, link = '';
+      break;
+  }
+
+    return `[![License](https://img.shields.io/badge/License-${badge}.svg)](https://opensource.org/licenses/${link})`;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return '';
+    return `
+## License    
+This project is licensed under the ${license} license.
+    `;
   // return markdown that creates the license section of your README
   // this will use the two functions above to create the badge and link
 }
 
+function renderInstallSection(command) {
+  return `
+## Installation
+\`\`\`
+${command}
+\`\`\`
+  `;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  let output = `
-${renderLicenseSection(data.license)}
-
+  return `
 # ${data.project}
+
+${renderLicenseBadge(data.license)}
+
+## Description
+${data.description}
+
+${renderTableOfContents(data)}
+
+${renderInstallSection(data.install)}
+
+## Usage
+${data.usage}
+
+${renderLicenseSection(data.license)}
 
 ## UserName 
 ${data.username}
   `;
-
-  return output;
 }
 
 module.exports = generateMarkdown;
