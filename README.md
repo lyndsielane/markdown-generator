@@ -1,18 +1,23 @@
 
-# e
+# laksjdfasdf
 
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/gpl-3.0)
 
 ## Description
-gkg
+asdf
 
 
 ## Table of Contents
-* [Installation](#installation)
+* [Installation](#installation) 
+
 * [Usage](#usage)
+
 * [License](#license)
+
 * [Contributing](#contributing)
+
 * [Tests](#tests)
+
 * [Questions](#questions)
   
 
@@ -20,30 +25,30 @@ gkg
 ## Installation
 To install necessary dependencies, run the following command:
 ```
-dld
+asdf
 ```
   
 
 ## Usage
-gge
+asdf
 
 
 ## License    
-This project is licensed under the MIT license.
+This project is licensed under the GPL 3.0 license.
     
 
 ## Contributing
-ldld
+asdf
 
 
 ## Tests
 To run tests, run the following command:
 ```
-ksk
+asdf
 ```
   
 
 
 ## Questions
-If you have any questions about the repo, open an issue or contact me direction at gkge. You can find more of my work at kdd.
+If you have any questions about the repo, open an issue or contact me direction at [lyndsielane@yahoo.com](mailto:lyndsielane@yahoo.com). You can find more of my work at [lyndsielane](https://github.com/lyndsielane).
   

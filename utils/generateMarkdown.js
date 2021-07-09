@@ -1,11 +1,16 @@
 function renderTableOfContents(data) {
   return `
 ## Table of Contents
-* [Installation](#installation)
+* [Installation](#installation) 
+
 * [Usage](#usage)
+
 * [License](#license)
+
 * [Contributing](#contributing)
+
 * [Tests](#tests)
+
 * [Questions](#questions)
   `;
 }
@@ -77,7 +82,7 @@ ${command}
 function renderQuestionsSection(email, username) {
   return `
 ## Questions
-If you have any questions about the repo, open an issue or contact me direction at ${email}. You can find more of my work at ${username}.`;
+If you have any questions about the repo, open an issue or contact me direction at [${email}](mailto:${email}). You can find more of my work at [${username}](https://github.com/${username}).`;
 }
 
 // TODO: Create a function to generate markdown for README
