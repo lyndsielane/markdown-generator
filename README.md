@@ -1,10 +1,10 @@
 
-# laksjdfasdf
+# READme Generator
 
-[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/gpl-3.0)
+
 
 ## Description
-asdf
+A command line program that accepts project data and generates a professional READme file.
 
 
 ## Table of Contents
@@ -25,26 +25,26 @@ asdf
 ## Installation
 To install necessary dependencies, run the following command:
 ```
-asdf
+npm i
 ```
   
 
 ## Usage
-asdf
+Follow the prompts to enter your project information. Use the READme generated.
 
 
 ## License    
-This project is licensed under the GPL 3.0 license.
+This project is licensed under the none license.
     
 
 ## Contributing
-asdf
+Send a request for review.
 
 
 ## Tests
 To run tests, run the following command:
 ```
-asdf
+test
 ```
   
 
