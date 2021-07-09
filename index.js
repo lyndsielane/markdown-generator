@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
-const questions = inquirer.prompt([
+const questions = [
     {
         type: 'input',
         message: "What is your username?",
@@ -24,7 +24,7 @@ const questions = inquirer.prompt([
         name: 'description'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Please choose your license type.',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'none'],
         name: 'license'
@@ -49,13 +49,22 @@ const questions = inquirer.prompt([
         message: "Advise user information for contributing.",
         name: 'contribution'
     }
-]);
+];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+function writeToFile(fileName, data) {
+    return `#${data.project}`;
+}
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    const fileName = "README.md";
+    inquirer.prompt(questions)
+        .then (data => fs.writeFile(fileName, writeToFile(fileName, data), (err) => {
+            if (err) console.log(error);
+            else console.log("File created successfully.");
+        }
+        ))
+};
 
 // Function call to initialize app
 init();
