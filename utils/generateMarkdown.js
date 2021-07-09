@@ -2,8 +2,11 @@ function renderTableOfContents(data) {
   return `
 ## Table of Contents
 * [Installation](#installation)
-
 * [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
   `;
 }
 
@@ -54,10 +57,27 @@ This project is licensed under the ${license} license.
 function renderInstallSection(command) {
   return `
 ## Installation
+To install necessary dependencies, run the following command:
 \`\`\`
 ${command}
 \`\`\`
   `;
+}
+
+function renderTestsSection(command) {
+  return `
+## Tests
+To run tests, run the following command:
+\`\`\`
+${command}
+\`\`\`
+  `;  
+}
+
+function renderQuestionsSection(email, username) {
+  return `
+## Questions
+If you have any questions about the repo, open an issue or contact me direction at ${email}. You can find more of my work at ${username}.`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -79,8 +99,12 @@ ${data.usage}
 
 ${renderLicenseSection(data.license)}
 
-## UserName 
-${data.username}
+## Contributing
+${data.contribution}
+
+${renderTestsSection(data.test)}
+
+${renderQuestionsSection(data.email, data.username)}
   `;
 }
 
